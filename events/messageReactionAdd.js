@@ -1,7 +1,7 @@
 module.exports = {
   name: 'messageReactionAdd',
   execute(client, reaction, user) {
-    channel = '986416350912192562'
+    channel = process.env.channel
     if (reaction.message.partial) reaction.message.fetch();
     if (reaction.partial) reaction.fetch();
     if (user.bot) return;
