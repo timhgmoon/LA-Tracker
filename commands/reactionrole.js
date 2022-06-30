@@ -20,14 +20,14 @@ module.exports = {
 
     const msg = await interaction.reply({ content: 'You can react with Unicode emojis!', embed: [embed], fetchReply: true });
     const filter = msg => msg.content.includes('🍇');
-    const collector = interaction.channel.createMessageCollector({ filter, time: 15000 });
-    collector.on('collect', m => {
-      console.log(`Collected ${m.content}`);
-    });
+    // const collector = interaction.channel.createMessageCollector({ filter, time: 15000 });
+    // collector.on('collect', m => {
+    //   console.log(`Collected ${m.content}`);
+    // });
 
-    collector.on('end', collected => {
-      console.log(`Collected ${collected.size} items`);
-    });
+    // collector.on('end', collected => {
+    //   console.log(`Collected ${collected.size} items`);
+    // });
     try {
       await msg.react(test1Emoji);
       await msg.react(test2Emoji);
